@@ -1,0 +1,247 @@
+.ino-modal{
+	width: 0px;
+	height: 0px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 60px 20%;
+	z-index: 99999;
+}
+.ino-modal.transSize{
+	width: 60%;
+	height: calc(100% - 120px);
+}
+
+.ino-modal .rs-table-responsif{
+ float: left;width: 100%;
+ position: relative;
+}
+.ino-modal iframe{
+	width: 100%;
+	height: 100%;
+	border: 0px;
+	float: left;
+}
+.ino-modal.fullSize{
+	width: 100% !important;
+	height: 100% !important;
+	padding: 0px !important;
+}
+.ino-modal.fullSize .content{
+	border-radius: 0px;
+}
+.ino-modal.remove{
+	width: 100%;
+	height: 0%;
+	padding: 0px;
+}
+.ino-modal.mini{
+	width: 0px;
+	height: 0px;
+	padding: 0px;
+}
+.ino-modal.mini .*{
+	display: none;
+}
+.ino-modal.mini .show{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 999999;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+}
+.ino-modal .header, .ino-modal .content, .ino-modal .footer, .ino-modal .main{
+	width: 100%;
+	overflow: hidden;
+	padding: 0px;
+	float: left;
+}
+.ino-modal .content{
+	background-color: #FFF;
+	font-style: 12px;
+	z-index: 999999;
+	position: relative;
+	height: 100%;
+	border-radius: 5px;
+}
+.ino-modal .panel{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	color: #FFF;
+}
+.ino-modal .panel i {
+	height: 15px;
+	width: 15px;
+	line-height: 15px;
+	text-align: center;
+	padding: 5px;
+	font-size: 12px;
+	background-color: rgba(0, 0, 0, 0.2);
+	float: left;
+	z-index: 9999;
+	position: relative;
+}
+.ino-modal .panel i:hover{
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ino-modal .header,
+.ino-modal .main,
+.ino-modal .footer{
+	position: absolute;
+}
+.ino-modal .header{
+	font-size: 21px;
+	font-weight: bold;
+	background-color: tomato;
+	color:#FFFFFF;
+	height: 50px;
+	box-shadow: 0px 0px 15px 0px #999;
+	z-index: 3;
+}
+.ino-modal .header h1{
+	padding: 10px;
+	font-size: 22px;
+}
+.ino-modal .header h1 .marquee{
+	line-height: 30px;
+	height: 30px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.ino-modal .main{
+	height: calc(100% - 100px);
+	top: 50px;
+	overflow-y: auto;
+}
+.ino-modal .footer{
+	box-shadow: 0px 0px 5px 0px #999;
+	background-color:#EEE;
+	height: 40px;
+	bottom: 0px;
+	padding: 5px 0px;
+	z-index: 2;
+	overflow: hidden;
+	overflow-x: auto;
+  white-space: nowrap; 
+}
+/*
+.ino-modal .footer:after, .rs-table-responsif:after{
+	background-color: #000;
+	color: #FFF;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 0px;
+	content: 'Geser Ke Kanan';
+	padding: 5px 0px;
+	line-height: 40px;
+	text-align: center;
+	overflow: hidden;
+  animation: footerHelp 3s;
+	opacity: 0;
+  transform: scale(0);
+}
+.rs-table-responsif:after{
+	content: 'Klik 2x Melihat Detail Data';
+}
+
+@keyframes footerHelp {
+  0% {
+		opacity: 0.8;
+    transform: scale(1);
+    height: 100%;
+  }
+  99.999% {
+    transform: scale(1);
+    height: 100%;
+  }
+}
+*/
+.ino-modal .footer button{
+	margin: 4px 8px;
+	margin-right: 0px;
+	margin-bottom: 3.5px;
+}
+.ino-modal .footer button:last-child{
+	margin-right: 8px;
+}
+.ino-modal .panel{
+	width: auto;
+	left: auto;
+	right: 0px;
+	top: 0px;
+	padding: 0px;
+}
+
+.ino-modal .panel i{
+	float: right;
+	margin: 0px;
+}
+
+
+.ino-modal.img{
+	overflow-x: hidden;
+}
+.ino-modal-img{
+	float: left;
+	height: 100%;
+	width: 100%;
+	background-color: #FFF;
+	overflow-x: hidden;
+	position: relative;
+}
+.ino-modal-img img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: auto;
+  height: 100%;
+}
+
+@media(max-width: 920px){
+	.ino-modal{
+		padding: 60px 10%;
+	}
+	.ino-modal.transSize{
+		width: 80%;
+		height: calc(100% - 120px);
+	}
+	.ino-modal-img img{
+    width: 100%;
+    height: auto;
+  }
+}
+@media(max-width: 720px){
+	.ino-modal{
+		padding: 60px 5%;
+	}
+	.ino-modal.transSize{
+		width: 100%;
+		height: 100%;
+		padding: 0px !important;
+	}
+	.ino-modal.fullSize{
+		width: 90% !important;
+		height: calc(100% - 120px) !important;
+		padding: 60px 5% !important;
+	}
+	.ino-modal .content{
+		border-radius: 0px;
+	}
+	.ino-modal.fullSize .content{
+		border-radius: 5px;
+	}
+	.ino-modal .fullSize-iframe iframe{
+		position: absolute;
+	}
+}
